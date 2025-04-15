@@ -1,0 +1,147 @@
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--color-gray-dark);
+    border: 10px solid var(--color-primary-0);
+    box-shadow:
+            0 0 20px rgba(123, 49, 212, 0.3),
+            inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.clock__face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.clock__hour-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.clock__hour-mark {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: var(--color-white);
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 140px;
+}
+
+/* Создаем 12 часовых меток */
+.clock__hour-mark:nth-child(1) { transform: rotate(0deg); }
+.clock__hour-mark:nth-child(2) { transform: rotate(30deg); }
+.clock__hour-mark:nth-child(3) { transform: rotate(60deg); }
+.clock__hour-mark:nth-child(4) { transform: rotate(90deg); }
+.clock__hour-mark:nth-child(5) { transform: rotate(120deg); }
+.clock__hour-mark:nth-child(6) { transform: rotate(150deg); }
+.clock__hour-mark:nth-child(7) { transform: rotate(180deg); }
+.clock__hour-mark:nth-child(8) { transform: rotate(210deg); }
+.clock__hour-mark:nth-child(9) { transform: rotate(240deg); }
+.clock__hour-mark:nth-child(10) { transform: rotate(270deg); }
+.clock__hour-mark:nth-child(11) { transform: rotate(300deg); }
+.clock__hour-mark:nth-child(12) { transform: rotate(330deg); }
+
+.clock__hands {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock__hour-hand,
+.clock__minute-hand,
+.clock__second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.clock__hour-hand {
+    width: 8px;
+    height: 60px;
+    background-color: var(--color-white);
+}
+
+.clock__minute-hand {
+    width: 6px;
+    height: 90px;
+    background-color: var(--color-white);
+}
+
+.clock__second-hand {
+    width: 2px;
+    height: 100px;
+    background-color: var(--color-primary-0);
+    z-index: 10;
+}
+
+.clock__center {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-primary-0);
+    z-index: 20;
+}
+
+.clock-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.clock-controls__button {
+    min-width: 120px;
+}
+
+/* Анимация для стрелок часов */
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* Адаптивность для часов */
+@media (max-width: 576px) {
+    .clock {
+        width: 240px;
+        height: 240px;
+    }
+
+    .clock__hour-mark {
+        transform-origin: 50% 110px;
+    }
+
+    .clock__hour-hand {
+        height: 50px;
+    }
+
+    .clock__minute-hand {
+        height: 70px;
+    }
+
+    .clock__second-hand {
+        height: 80px;
+    }
+}

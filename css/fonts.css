@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Guft';
+    src: url('../fonts/Guft-Bold.woff2') format('woff2'),
+    url('../fonts/Guft-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Guft';
+    src: url('../fonts/Guft-SemiBold.woff2') format('woff2'),
+    url('../fonts/Guft-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Guft';
+    src: url('../fonts/Guft-Medium.woff2') format('woff2'),
+    url('../fonts/Guft-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Guft';
+    src: url('../fonts/Guft-Regular.woff2') format('woff2'),
+    url('../fonts/Guft-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Guft';
+    src: url('../fonts/Guft-Light.woff2') format('woff2'),
+    url('../fonts/Guft-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
