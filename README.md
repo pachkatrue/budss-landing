@@ -2,6 +2,12 @@
 
 Responsive landing page built with semantic HTML, modular CSS and vanilla JavaScript.
 
+## Preview
+
+[Live demo](https://budss-landing.netlify.app)
+
+![Project preview](https://d33wubrfki0l68.cloudfront.net/68123a9820de4f2cfabf124e/screenshot_2025-04-30-14-58-36-0000.webp)
+
 ## Highlights
 
 - Responsive layout for desktop and mobile
